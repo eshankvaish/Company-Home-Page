@@ -27,7 +27,10 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-a { text-decoration: none; }
+a {
+	text-decoration: none;
+	color: $black-color;
+}
 h1 { font-size: 3.2rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 2.08rem; }

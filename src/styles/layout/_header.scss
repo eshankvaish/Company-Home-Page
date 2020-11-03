@@ -1,0 +1,15 @@
+.top-navbar {
+    @include flexbox(row, space-between);
+}
+.top-navbar__logo-container {
+    @include flexbox(row, space-between);
+    flex: 100%;
+}
+.top-navbar__items-container {
+    @include flexbox(row);
+    flex: 100%;
+    &>div{
+        width: 100%;
+        text-align: center;
+    }
+}
