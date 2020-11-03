@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('/src/assets/icons/icomoon.eot?f25fxq');
+    src:  url('/src/assets/icons/icomoon.eot?f25fxq#iefix') format('embedded-opentype'),
+      url('/src/assets/icons/icomoon.ttf?f25fxq') format('truetype'),
+      url('/src/assets/icons/icomoon.woff?f25fxq') format('woff'),
+      url('/src/assets/icons/icomoon.svg?f25fxq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak-as: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}  
+.icon-diamond:before {
+    content: "\e900";
+    color: #ef7622;
+}
+.icon-eye:before {
+    content: "\e901";
+    color: #ef7622;
+}
+.icon-facebook:before {
+    content: "\e902";
+    color: #fff;
+}
+.icon-flow-chart:before {
+    content: "\e903";
+    color: #ef7622;
+}
+.icon-growth:before {
+    content: "\e904";
+    color: #ef7622;
+}
+.icon-linear-growth:before {
+    content: "\e905";
+    color: #ef7622;
+}
+.icon-linkedin:before {
+    content: "\e906";
+    color: #fff;
+}
+.icon-money-growth:before {
+    content: "\e907";
+    color: #ef7622;
+}
+.icon-square:before {
+    content: "\e909";
+    color: #ef7622;
+}
+.icon-tower:before {
+    content: "\e90a";
+    color: #ef7622;
+}
+.icon-twitter:before {
+    content: "\e90b";
+    color: #fff;
+}
+.icon-Vimeo:before {
+    content: "\e90c";
+    color: #fff;
+}
+.icon-window-reload:before {
+    content: "\e90d";
+    color: #ef7622;
+}
