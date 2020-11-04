@@ -30,10 +30,7 @@
 }
 /*Media Queries for Tablets*/
 @include breakpoint-tablet {
-    .top-navbar {
-        @include center-container($container-width-tablet);
-        padding: 0;
-    }
+    .top-navbar { padding: 0; }
     .logo__img {
         width: 108px;
         height: 40px;
@@ -44,7 +41,6 @@
         padding: 0;
     }
     .top-nav-list {
-        @include center-container($container-width-tablet);
         height: calc(100vh - #{$topbar-tablet-desktop-min-height});
         top: 80px;
     }
@@ -53,7 +49,6 @@
 /*Media Queries for Tablets End*/
 /*Media Queries for Small Desktop*/
 @include breakpoint-desktop {
-    .top-navbar { @include center-container($container-width-desktop); }
     .logo-toggle { display: none; }
     .logo-container {
         flex: auto;
@@ -82,7 +77,3 @@
     .top-nav-list__item--last { display: none; }
 }
 /*Media Queries for Small Desktop End*/
-/*Media Queries for Large Desktop*/
-@include breakpoint-large-desktop {
-    .top-navbar { @include center-container($container-width-large-desktop); }
-}
