@@ -1,2 +1,24 @@
 $font-size: 62.5%;
-$black-color: black;
+
+/*Breakpoints for various devices*/
+$tablet-min-width: 768px;
+$tablet-max-width: 1024px;
+$tablet-min-width: 1025px;
+$tablet-max-width: 1439px;
+
+$primary-padding: 20px;
+
+/*Colors*/
+$color-primary: #EF7622;  //primary-color
+$primary-gradient-bg-color: #F8AE47;
+$secondary-bg-color-1: #030F21;
+$secondary-bg-color-2: #3E445A;
+$secondary-bg-color-3: #40465C;
+/*text colors*/
+$primary-text-color: #1D1D1D;
+$secondary-text-color: #ffffff;
+$border-color: #bcbcbc;
+/*Header Colors*/
+$header-bg-color: rgba(0, 0, 0, 0.13);
+$menu-bg-color: #f8f8f8;
+
