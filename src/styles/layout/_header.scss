@@ -5,6 +5,14 @@
     padding: 0 $primary-padding;
     min-height: 61px;
 }
+.logo {
+    height: 35px;
+    width: 96px;
+}
+.logo__img {
+    height: 100%;
+    width: 100%;
+}
 .top-nav-list {
     background-color: $menu-bg-color;
     width: 100%;
@@ -16,7 +24,6 @@
 }
 .top-nav-list__item {
     width: 100%;
-    padding: 20px 0 17px $primary-padding;
     border-bottom: 0.7px solid $border-color;
 }
 .logo-toggle__img {
@@ -27,11 +34,14 @@
 .top-nav-list__item--content {
     @include set-line-height(2.75px);
     font-size: 1.6rem;
+    padding: 20px 0 17px $primary-padding;
+    display: block;
 }
+.top-nav-list__item:hover { background-color: $menu-hover-color; }
 /*Media Queries for Tablets*/
 @include breakpoint-tablet {
     .top-navbar { padding: 0; }
-    .logo__img {
+    .logo {
         width: 108px;
         height: 40px;
     }
@@ -44,7 +54,7 @@
         height: calc(100vh - #{$topbar-tablet-desktop-min-height});
         top: 80px;
     }
-    .top-nav-list__item { padding: 20px 0 17px $primary-padding-tablet; }
+    .top-nav-list__item--content { padding: 20px 0 17px $primary-padding-tablet; }
 }
 /*Media Queries for Tablets End*/
 /*Media Queries for Small Desktop*/
