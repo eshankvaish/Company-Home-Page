@@ -1,6 +1,4 @@
-.top-navbar {
-    @include flexbox(row, space-between);
-}
+.top-navbar { @include flexbox(row, space-between); }
 .logo-container {
     @include flexbox(row, space-between, center);
     flex: 100%;
@@ -10,8 +8,11 @@
 .top-nav-list {
     background-color: $menu-bg-color;
     width: 100%;
-    height: 89vh;
+    height: calc(100vh - 61px);
     display: none;
+    position: fixed;
+    top: 61px;
+    overflow: auto;
 }
 .top-nav-list__item {
     width: 100%;
@@ -20,11 +21,68 @@
 }
 .logo-toggle__img {
     display: none;
+    font-size: 2.5rem;
 }
-.active {
-    display: block;
-}
+.toggle-active { display: block; }
 .top-nav-list__item--content {
     @include set-line-height(2.75px);
     font-size: 1.6rem;
+}
+/*Media Queries for Tablets*/
+@include breakpoint-tablet {
+    .top-navbar {
+        @include center-container($container-width-tablet);
+        padding: 0;
+    }
+    .logo__img {
+        width: 108px;
+        height: 40px;
+    }
+    .logo-toggle__img { font-size: 3.5rem; }
+    .logo-container {
+        min-height: $topbar-tablet-desktop-min-height;
+        padding: 0;
+    }
+    .top-nav-list {
+        @include center-container($container-width-tablet);
+        height: calc(100vh - #{$topbar-tablet-desktop-min-height});
+        top: 80px;
+    }
+    .top-nav-list__item { padding: 20px 0 17px $primary-padding-tablet; }
+}
+/*Media Queries for Tablets End*/
+/*Media Queries for Small Desktop*/
+@include breakpoint-desktop {
+    .top-navbar { @include center-container($container-width-desktop); }
+    .logo-toggle { display: none; }
+    .logo-container {
+        flex: auto;
+        min-height: $topbar-tablet-desktop-min-height;
+    }
+    .top-nav-list {
+        @include flexbox(row, space-between, center);
+        height: auto;
+        background: none;
+        width: auto;
+        position: static;
+        min-height: $topbar-tablet-desktop-min-height;
+    }
+    .top-nav-list__item {
+        width: auto;
+        border: none;
+        font-size: 1.4rem;
+        padding: 0;
+    }
+    .top-nav-list__item--content {
+        @include set-line-height(2px);
+        font-size: 1.4rem;
+        padding: 0 11px 0 20px;
+        color: $nav-items-text-color;
+    }
+    .top-nav-list__item--last { display: none; }
+}
+/*Media Queries for Small Desktop End*/
+/*Media Queries for Large Desktop*/
+@include breakpoint-large-desktop {
+    .top-navbar { @include center-container($container-width-large-desktop); }
 }

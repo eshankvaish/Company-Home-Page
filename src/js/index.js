@@ -5,13 +5,13 @@ const topNavList = document.querySelector('.top-nav-list');
 document.addEventListener('DOMContentLoaded', function() {
     function toggleMenu(clickedOn) {
         if(clickedOn === 'Hamburger') {
-            hamburgerToggle.classList.remove('active');
-            crossToggle.classList.add('active');
-            topNavList.classList.add('active');
+            hamburgerToggle.classList.remove('toggle-active');
+            crossToggle.classList.add('toggle-active');
+            topNavList.classList.add('toggle-active');
         } else {
-            hamburgerToggle.classList.add('active');
-            crossToggle.classList.remove('active');
-            topNavList.classList.remove('active');
+            hamburgerToggle.classList.add('toggle-active');
+            crossToggle.classList.remove('toggle-active');
+            topNavList.classList.remove('toggle-active');
         }
     }
     hamburgerToggle.addEventListener('click', () => {
