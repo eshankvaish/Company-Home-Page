@@ -9,3 +9,7 @@
         flex-wrap: wrap;
     }
 }
+
+@mixin set-line-height($value: 4px) {
+    line-height: calc(1em + #{$value});
+}
