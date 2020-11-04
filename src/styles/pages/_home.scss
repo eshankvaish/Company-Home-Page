@@ -10,3 +10,4 @@
 @include breakpoint-large-desktop {
     .center-container { @include center-container($container-width-large-desktop); }
 }
+.overflow-hidden { overflow: hidden; } 
