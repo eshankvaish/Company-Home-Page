@@ -24,7 +24,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-  
+.icon-close:before {
+    content: "\e908";
+}
+.icon-menu:before {
+    content: "\e90e";
+}
 .icon-diamond:before {
     content: "\e900";
     color: #ef7622;
