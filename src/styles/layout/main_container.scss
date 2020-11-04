@@ -1,0 +1,12 @@
+.about {
+    padding: 0 $primary-padding;
+    min-height: 444px;
+    color: $secondary-text-color;
+    background: url('/src/assets/images/about-bg.png') no-repeat center;
+    background-size: cover;
+}
+.about__heading { @include set-line-height(4px); }
+.about__description {
+    @include set-line-height(5px);
+    font-size: 1.6rem;
+}
