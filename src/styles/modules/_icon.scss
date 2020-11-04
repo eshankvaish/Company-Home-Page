@@ -9,7 +9,7 @@
     font-style: normal;
     font-display: block;
 }
-  
+
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -23,7 +23,8 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}  
+}
+  
 .icon-diamond:before {
     content: "\e900";
     color: #ef7622;
@@ -75,4 +76,10 @@
 .icon-window-reload:before {
     content: "\e90d";
     color: #ef7622;
+}
+.icon-menu:before {
+    content: "\e9bd";
+}
+.icon-cross:before {
+    content: "\ea0f";
 }
