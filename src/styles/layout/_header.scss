@@ -8,10 +8,11 @@
 .logo {
     height: 35px;
     width: 96px;
-}
-.logo__img {
-    height: 100%;
-    width: 100%;
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
 }
 .top-nav-list {
     background-color: $menu-bg-color;
@@ -21,23 +22,25 @@
     position: fixed;
     top: 61px;
     overflow: auto;
-}
-.top-nav-list__item {
-    width: 100%;
-    border-bottom: 0.7px solid $border-color;
+
+    &__item {
+        width: 100%;
+        border-bottom: 0.7px solid $border-color;
+
+        &--content {
+            @include set-line-height(2.75px);
+            font-size: 1.6rem;
+            padding: 20px 0 17px $primary-padding;
+            display: block;
+        }
+    }
 }
 .logo-toggle__img {
     display: none;
     font-size: 2.5rem;
 }
 .toggle-active { display: block; }
-.top-nav-list__item--content {
-    @include set-line-height(2.75px);
-    font-size: 1.6rem;
-    padding: 20px 0 17px $primary-padding;
-    display: block;
-}
-.top-nav-list__item:hover { background-color: $menu-hover-color; }
+.top-nav-list__item--content:hover { color: $color-primary; }
 /*Media Queries for Tablets*/
 @include breakpoint-tablet {
     .top-navbar { padding: 0; }
@@ -53,8 +56,9 @@
     .top-nav-list {
         height: calc(100vh - #{$topbar-tablet-desktop-min-height});
         top: 80px;
+
+        &__item--content { padding: 20px 0 17px $primary-padding-tablet; }
     }
-    .top-nav-list__item--content { padding: 20px 0 17px $primary-padding-tablet; }
 }
 /*Media Queries for Tablets End*/
 /*Media Queries for Small Desktop*/
@@ -71,19 +75,21 @@
         width: auto;
         position: static;
         min-height: $topbar-tablet-desktop-min-height;
+        
+        &__item {
+            width: auto;
+            border: none;
+            font-size: 1.4rem;
+            padding: 0;
+
+            &--content {
+                @include set-line-height(2px);
+                font-size: 1.4rem;
+                padding: 0 11px 0 20px;
+                color: $nav-items-text-color;
+            }
+            &--last { display: none; }
+        }
     }
-    .top-nav-list__item {
-        width: auto;
-        border: none;
-        font-size: 1.4rem;
-        padding: 0;
-    }
-    .top-nav-list__item--content {
-        @include set-line-height(2px);
-        font-size: 1.4rem;
-        padding: 0 11px 0 20px;
-        color: $nav-items-text-color;
-    }
-    .top-nav-list__item--last { display: none; }
 }
 /*Media Queries for Small Desktop End*/
