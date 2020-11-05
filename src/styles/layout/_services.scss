@@ -1,8 +1,18 @@
 .services-container {
-    //background: url("/src/assets/images/services-bg.png") no-repeat center bottom,linear-gradient(126.81deg, #F8AE47 3.48%, #EF7622 116.85%) no-repeat center top;
-    //background-size: contain;
     background: linear-gradient(126.81deg, #F8AE47 3.48%, #EF7622 116.85%);
     min-height: 1310px;
+    position: relative;
+    z-index: 0;
+}
+.services-other-bg-container {
+    /*For background at the bottom of the container*/
+    background: url('/src/assets/images/services-bg.png') no-repeat center;
+    background-size: cover;
+    min-height: 396px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
 }
 .services {
     @include flexbox(column);
@@ -20,12 +30,14 @@
         @include set-line-height;
         font-size: 2.3rem;
         padding: 6px 0 10px;
+        max-width: 271px;
     }
     &__description {
         @include set-line-height;
         font-size: 1.6rem;
         font-weight: 300;
     }
+    &__img { display: none; }
 }
 .service {
     @include flexbox(column, space-between);
@@ -35,9 +47,7 @@
     color: $primary-text-color;
     min-height: 283px;
 
-    &__icon {
-        font-size: 3.8rem;
-    }
+    &__icon { font-size: 3.8rem; }
     &__heading {
         @include set-line-height;
         padding: 8px 0;
@@ -56,7 +66,7 @@
         color: $color-primary;
     }
 }
-
+/*Media Queries for Tablet*/
 @include breakpoint-tablet {
     .services-container {
         padding-top: 50px;
@@ -98,7 +108,7 @@
         }
     }
 }
-
+/*Media Queries for Desktop*/
 @include breakpoint-desktop {
     .services-container {
         padding-top: 60px;
@@ -136,8 +146,9 @@
         &__description { font-size: 1.4rem; }
     }
 }
-
+/*Media Queries for Large Desktop*/
 @include breakpoint-large-desktop {
+    .description-container { display: flex; }
     .services-container {
         padding-top: 70px;
         min-height: 1161px;
@@ -157,7 +168,11 @@
         &__heading {
             @include set-line-height(2px);
             font-size: 3.8rem;
-            max-width: 259px;
+            max-width: 315px;
+        }
+        &__img {
+            display: block;
+            padding: 5px 12px 0 0;
         }
     }
     .service {
