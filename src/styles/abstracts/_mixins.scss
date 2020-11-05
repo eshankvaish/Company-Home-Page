@@ -46,3 +46,9 @@
         @content;
     }
 }
+
+@mixin breakpoint-custom($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
