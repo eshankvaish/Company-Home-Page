@@ -77,7 +77,7 @@
         justify-content: space-between;
     }
     .what-we-do, .service {
-        max-width: 348px;
+        flex: 49%;
         min-height: 300px;
         margin-bottom: 12px;
         padding: 24px 24px 30px;
@@ -107,6 +107,7 @@
             letter-spacing: 1.29px;
         }
     }
+    .service-1, .service-3 { margin-left: 12px; }
 }
 /*Media Queries for Desktop*/
 @include breakpoint-desktop {
@@ -115,7 +116,6 @@
         min-height: 1127px;
     }
     .what-we-do, .service {
-        max-width: 464px;
         min-height: 363px;
         margin-bottom: 15px;
         padding: 36px 32px 60px;
@@ -145,6 +145,7 @@
         }
         &__description { font-size: 1.4rem; }
     }
+    .service-1, .service-3 { margin-left: 15px; }
 }
 /*Media Queries for Large Desktop*/
 @include breakpoint-large-desktop {
@@ -154,7 +155,6 @@
         min-height: 1161px;
     }
     .what-we-do, .service {
-        max-width: 593px;
         min-height: 350px;
         margin-bottom: 20px;
         padding: 54px 41px 41px;
@@ -183,4 +183,5 @@
             max-width: 200px;
         }
     }
+    .service-1, .service-3 { margin-left: 20px; }
 }
