@@ -1,17 +1,171 @@
+.services-container {
+    //background: url("/src/assets/images/services-bg.png") no-repeat center bottom,linear-gradient(126.81deg, #F8AE47 3.48%, #EF7622 116.85%) no-repeat center top;
+    //background-size: contain;
+    background: linear-gradient(126.81deg, #F8AE47 3.48%, #EF7622 116.85%);
+    min-height: 1310px;
+}
 .services {
     @include flexbox(column);
     padding: 45px $primary-padding 0;
 }
-.what-we-do__company-name {
-    @include set-line-height(3px);
-    font-size: 1.6rem;
-    letter-spacing: 1.52px;
+.what-we-do {
+    padding-bottom: 30px;
+
+    &__company-name{
+        @include set-line-height(3px);
+        font-size: 1.6rem;
+        letter-spacing: 1.52px;
+    }
+    &__heading {
+        @include set-line-height;
+        font-size: 2.3rem;
+        padding: 6px 0 10px;
+    }
+    &__description {
+        @include set-line-height;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
 }
-.what-we-do__heading {
-    @include set-line-height;
-    font-size: 2.3rem;
+.service {
+    @include flexbox(column, space-between);
+    background: $secondary-text-color;
+    padding: 15px 15px 30px;
+    margin-bottom: 15px;
+    color: $primary-text-color;
+    min-height: 283px;
+
+    &__icon {
+        font-size: 3.8rem;
+    }
+    &__heading {
+        @include set-line-height;
+        padding: 8px 0;
+        font-size: 1.5rem;
+        max-width: 148px;
+    }
+    &__description {
+        @include set-line-height(5px);
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    &__learn-more {
+        @include set-line-height(2px);
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        color: $color-primary;
+    }
 }
-.what-we-do__description {
-    @include set-line-height;
-    font-size: 1.6rem;
+
+@include breakpoint-tablet {
+    .services-container {
+        padding-top: 50px;
+        min-height: 1000px;
+    }
+    .services {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .what-we-do, .service {
+        max-width: 348px;
+        min-height: 300px;
+        margin-bottom: 12px;
+        padding: 24px 24px 30px;
+    }
+    .what-we-do {
+        &__company-name {
+            @include set-line-height(3.09px);
+            letter-spacing: 1.71px;
+            font-size: 1.8rem;
+        }
+        &__heading {
+            @include set-line-height(2px);
+            font-size: 2.6rem;
+            max-width: 259px;
+        }
+    }
+    .service {
+        &__heading {
+            @include set-line-height(2px);
+            font-size: 1.6rem;
+            max-width: 164px;
+        }
+        &__description { font-size: 1.4rem; }
+        &__learn-more {
+            @include set-line-height(2.41px);
+            font-size: 1.4rem;
+            letter-spacing: 1.29px;
+        }
+    }
+}
+
+@include breakpoint-desktop {
+    .services-container {
+        padding-top: 60px;
+        min-height: 1127px;
+    }
+    .what-we-do, .service {
+        max-width: 464px;
+        min-height: 363px;
+        margin-bottom: 15px;
+        padding: 36px 32px 60px;
+    }
+    .what-we-do {
+        &__company-name {
+            @include set-line-height(3.44px);
+            letter-spacing: 1.9px;
+            font-size: 2.0rem;
+        }
+        &__heading {
+            @include set-line-height(4px);
+            font-size: 3.0rem;
+            max-width: 259px;
+        }
+        &__description {
+            @include set-line-height(6px);
+            font-size: 1.7rem;
+        }
+    }
+    .service {
+        &__icon { font-size: 4.5rem; }
+        &__heading {
+            @include set-line-height;
+            font-size: 1.6rem;
+            max-width: 164px;
+        }
+        &__description { font-size: 1.4rem; }
+    }
+}
+
+@include breakpoint-large-desktop {
+    .services-container {
+        padding-top: 70px;
+        min-height: 1161px;
+    }
+    .what-we-do, .service {
+        max-width: 593px;
+        min-height: 350px;
+        margin-bottom: 20px;
+        padding: 54px 41px 41px;
+    }
+    .what-we-do {
+        &__company-name {
+            @include set-line-height(4.13px);
+            letter-spacing: 1.98px;
+            font-size: 2.4rem;
+        }
+        &__heading {
+            @include set-line-height(2px);
+            font-size: 3.8rem;
+            max-width: 259px;
+        }
+    }
+    .service {
+        &__icon { font-size: 4.5rem; }
+        &__heading {
+            @include set-line-height;
+            font-size: 2.0rem;
+            max-width: 200px;
+        }
+    }
 }
