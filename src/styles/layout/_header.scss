@@ -19,7 +19,6 @@
     width: 100%;
     height: calc(100vh - 61px);
     display: none;
-    position: fixed;
     top: 61px;
     overflow: auto;
 
@@ -30,7 +29,7 @@
         &--content {
             @include set-line-height(2.75px);
             font-size: 1.6rem;
-            padding: 20px 0 17px $primary-padding;
+            padding: 20px $primary-padding 17px;
             display: block;
         }
     }
