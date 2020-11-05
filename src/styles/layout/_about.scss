@@ -26,6 +26,8 @@
         font-size: 1.4rem;
         letter-spacing: 1.47px;
         color: $secondary-text-color;
+
+        &:hover { color: $color-primary; }
     }
 }
 /*Media Queries*/
