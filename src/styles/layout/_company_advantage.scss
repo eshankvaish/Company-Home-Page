@@ -3,7 +3,139 @@
     box-shadow: 0px 5px 16px $header-bg-color;
 }
 .company-advantage {
+    @include flexbox(column, space-between);
     padding: 45px $primary-padding;
     color: $secondary-text-color;
+    min-height: 1449px;
     
+    &__intro {
+        @include flexbox(column, space-between);
+        min-height: 235px;
+
+        &--heading {
+            @include set-line-height;
+            font-size: 2.3rem;
+        }
+        &--description {
+            padding-top: 10px;
+            @include set-line-height;
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+        &--learn-more {
+            @include set-line-height(2px);
+            font-size: 1.4rem;
+            letter-spacing: 1.29px;
+
+            &:hover { color: $color-primary; }
+        }
+    }
+}
+.advantage-container {
+    @include flexbox(column, space-between);
+    min-height: 1090px;
+}
+.advantage {
+    &__icon { font-size: 3.5rem; }
+    &__heading {
+        @include set-line-height;
+        font-size: 1.5rem;
+        padding: 8px 0;
+        max-width: 150px;
+    }
+    &__description {
+        @include set-line-height(5px);
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
+
+@include breakpoint-tablet {
+    .company-advantage {
+        flex-direction: row;
+        min-height: 721px;
+        padding: 50px 0 0!important;
+
+        &__intro {
+            max-width: 30.5%;
+
+            &--heading {
+                @include set-line-height(2px);
+                font-size: 2.6rem;
+            }
+            &--description {
+                padding: 15px 0 35px;
+            }
+        }
+    }
+    .advantage-container {
+        max-width: 66%;
+        flex-direction: row;
+        min-height: 655px;
+    }
+    .advantage {
+        max-width: 216px; 
+        &__heading {
+            font-size: 1.6rem;
+            padding: 8px 0;
+            max-width: 150px;
+        }
+        &__description { font-size: 1.4rem; }
+    }    
+    .advantage-first { order: 1; }
+    .advantage-second { order: 3; }
+    .advantage-third { order: 5; }
+    .advantage-fourth { order: 2; }
+    .advantage-fifth { order: 4; }
+    .advantage-sixth { order: 6; }
+}
+
+@include breakpoint-desktop {
+    .company-advantage {
+        min-height: 691px;
+        padding: 60px 0 0!important;
+
+        &__intro {
+            &--heading {
+                @include set-line-height;
+                font-size: 3rem;
+            }
+            &--description {
+                @include set-line-height(5px);
+                font-size: 1.8rem;
+                padding: 15px 0 45px;
+            }
+            &--learn-more {
+                @include set-line-height(2.92px);
+                font-size: 1.7rem;
+                letter-spacing: 1.57px;
+            }
+        }
+    }
+    .advantage-container { min-height: 631px; }
+    .advantage { max-width: 270px; }
+}
+
+@include breakpoint-large-desktop {
+    .company-advantage {
+        min-height: 739px;
+        padding: 69px 0 0!important;
+
+        &__intro {
+            max-width: 30.5%;
+
+            &--heading {
+                @include set-line-height(2px);
+                font-size: 3.8rem;
+            }
+            &--description { padding: 16px 0 42px; }
+        }
+    }
+    .advantage-container { min-height: 631px; }
+    .advantage {
+        max-width: 350px;
+
+        &__icon { font-size: 4rem; }
+        &__heading { font-size: 2rem; }
+    }
 }
