@@ -1,0 +1,94 @@
+.top-navbar { @include flexbox(row, space-between); }
+.logo-container {
+    @include flexbox(row, space-between, center);
+    flex: 100%;
+    padding: 0 $primary-padding;
+    min-height: 61px;
+}
+.logo {
+    height: 35px;
+    width: 96px;
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+}
+.top-nav-list {
+    background-color: $menu-bg-color;
+    width: 100%;
+    height: calc(100vh - 61px);
+    display: none;
+    top: 61px;
+    overflow: auto;
+
+    &__item {
+        width: 100%;
+        border-bottom: 0.7px solid $border-color;
+
+        &--content {
+            @include set-line-height(2.75px);
+            font-size: 1.6rem;
+            padding: 20px $primary-padding 17px;
+            display: block;
+        }
+    }
+}
+.logo-toggle__img {
+    display: none;
+    font-size: 2.5rem;
+}
+.toggle-active { display: block; }
+.top-nav-list__item--content:hover { color: $color-primary; }
+/*Media Queries for Tablets*/
+@include breakpoint-tablet {
+    .top-navbar { padding: 0; }
+    .logo {
+        width: 108px;
+        height: 40px;
+    }
+    .logo-toggle__img { font-size: 3.5rem; }
+    .logo-container {
+        min-height: $topbar-tablet-desktop-min-height;
+        padding: 0;
+    }
+    .top-nav-list {
+        height: calc(100vh - #{$topbar-tablet-desktop-min-height});
+        top: 80px;
+
+        &__item--content { padding: 20px 0 17px $primary-padding-tablet; }
+    }
+}
+/*Media Queries for Tablets End*/
+/*Media Queries for Small Desktop*/
+@include breakpoint-desktop {
+    .logo-toggle { display: none; }
+    .logo-container {
+        flex: auto;
+        min-height: $topbar-tablet-desktop-min-height;
+    }
+    .top-nav-list {
+        @include flexbox(row, space-between, center);
+        height: auto;
+        background: none;
+        width: auto;
+        position: static;
+        min-height: $topbar-tablet-desktop-min-height;
+        
+        &__item {
+            width: auto;
+            border: none;
+            font-size: 1.4rem;
+            padding: 0;
+
+            &--content {
+                @include set-line-height(2px);
+                font-size: 1.4rem;
+                padding: 0 11px 0 20px;
+                color: $nav-items-text-color;
+            }
+            &--last { display: none; }
+        }
+    }
+}
+/*Media Queries for Small Desktop End*/

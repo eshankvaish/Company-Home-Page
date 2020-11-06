@@ -10,8 +10,40 @@
 <body>
     <header>
         <!--Top Navbar-->
-        <nav class="top-navbar">
-            
+        <nav class="top-navbar center-container">
+            <!--Logo Container-->
+            <div class="logo-container">
+                <div class="logo">
+                    <img class="logo__img" src="./src/assets/images/RigNet Logo.png" alt="Rignet Logo" />
+                </div>
+                <!--Toggle Icon for submenu in mobile / tablet view-->
+                <div class="logo-toggle">
+                    <i class="icon icon-menu logo-toggle__img logo-toggle__hamburger toggle-active"></i>
+                    <i class="icon icon-close logo-toggle__img logo-toggle__cross"></i>
+                </div>
+            </div>
+            <!--Nav Items-->
+            <ul class="top-nav-list center-container">
+                <li class="top-nav-list__item">
+                    <a class="top-nav-list__item--content" href="#">RigNet Digital Transformation</a>
+                </li>
+                <li class="top-nav-list__item">
+                    <a class="top-nav-list__item--content" href="#">Oil & Gas Solutions</a>
+                </li>
+                <li class="top-nav-list__item">
+                    <a class="top-nav-list__item--content" href="#">Why RigNet</a>
+                </li>
+                <li class="top-nav-list__item">
+                    <a class="top-nav-list__item--content" href="#">Resources</a>
+                </li>
+                <li class="top-nav-list__item">
+                    <a class="top-nav-list__item--content" href="#">For investors</a>
+                </li>
+                <!--Last Item is not visible in desktop view-->
+                <li class="top-nav-list__item top-nav-list__item--last">
+                    <a class="top-nav-list__item--content" href="#">Contact Us</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <!--Main Section Container-->
@@ -20,7 +52,6 @@
         </div>
     </div>
     <footer>
-
     </footer>
     <!--Link to Custom JS-->
     <script src="./dist/index.js"></script>

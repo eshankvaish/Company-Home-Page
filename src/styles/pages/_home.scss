@@ -1,0 +1,13 @@
+/*Media Queries for Tablets*/
+@include breakpoint-tablet {
+    .center-container { @include center-container($container-width-tablet); }
+}
+/*Media Queries for Small Desktop*/
+@include breakpoint-desktop {
+    .center-container { @include center-container($container-width-desktop); } 
+}
+/*Media Queries for Large Desktop*/
+@include breakpoint-large-desktop {
+    .center-container { @include center-container($container-width-large-desktop); }
+}
+.overflow-hidden { overflow: hidden; } 

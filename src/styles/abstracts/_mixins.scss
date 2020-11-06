@@ -1,0 +1,42 @@
+//For Centering any container in respective view
+@mixin center-container($max-width) {
+    margin: auto;
+    max-width: $max-width;
+}
+
+@mixin flexbox($direction: row, $justify: flex-start, $align: flex-start, $wrap: wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @if $direction == column {
+        flex-direction: column;
+    }
+    @if $wrap == wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@mixin set-line-height($value: 4px) {
+    line-height: calc(1em + #{$value});
+}
+
+//Mixin for tablet related media queries
+@mixin breakpoint-tablet {
+    @media screen and (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+
+//Mixin for desktop related media queries
+@mixin breakpoint-desktop {
+    @media screen and (min-width: $desktop-min-width) { 
+        @content;
+    }
+}
+
+//Mixin for large desktop related media queries
+@mixin breakpoint-large-desktop {
+    @media screen and (min-width: $large-desktop-max-width) {
+        @content;
+    }
+}
