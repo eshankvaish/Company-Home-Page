@@ -1,6 +1,7 @@
 .about-container {
-    background: url('/src/assets/images/about-bg.png') no-repeat center;
+    background: linear-gradient(73.51deg, $about-bg-gradient-color-mobile-1 26.15%, $about-bg-gradient-color-mobile-2 59.36%, $about-bg-gradient-color-mobile-3 81.04%, $about-bg-gradient-color-mobile-4 113.89%, $about-bg-gradient-color-mobile-5  152.7%),url('/src/assets/images/about-bg.png') no-repeat center;
     background-size: cover;
+    mix-blend-mode: multiply;
 }
 .about {
     @include flexbox(column, center, flex-start, no-wrap);
@@ -32,6 +33,7 @@
 }
 /*Media Queries*/
 @include breakpoint-tablet {
+    .about-container { background: linear-gradient(63.66deg, $about-bg-gradient-color-mobile-1 16.93%, $about-bg-gradient-color-mobile-2 54.19%, $about-bg-gradient-color-mobile-3 86.52%, $about-bg-gradient-color-mobile-4 97.55%, $about-bg-gradient-color-mobile-5 133.2%), url('/src/assets/images/about-bg.png') no-repeat center; }
     .about {
         min-height: 600px;
         &__heading {
@@ -52,6 +54,7 @@
     }
 }
 @include breakpoint-desktop {
+    .about-container { background: linear-gradient(60.72deg, $about-bg-gradient-color-mobile-1 18.07%, $about-bg-gradient-color-mobile-2 43.89%, $about-bg-gradient-color-mobile-3 66.29%, $about-bg-gradient-color-mobile-4 74.94%, $about-bg-gradient-color-mobile-5 98.65%), url('/src/assets/images/about-bg.png') no-repeat center; }
     .about {
         &__heading {
             @include set-line-height(3px);
@@ -72,6 +75,7 @@
     }
 }
 @include breakpoint-large-desktop {
+    .about-container { background: linear-gradient(60.09deg, $about-bg-gradient-color-mobile-1 28.79%, $about-bg-gradient-color-mobile-2 51.17%, $about-bg-gradient-color-mobile-3 69.2%, $about-bg-gradient-color-mobile-4 78.26%, $about-bg-gradient-color-mobile-5 98.64%), url('/src/assets/images/about-bg.png') no-repeat center; }
     .about {
         min-height: 700px;
         
@@ -87,7 +91,5 @@
     }
 }
 @include breakpoint-large-display {
-    .about-container {
-        background: radial-gradient(39.89% 31.89% at 50% 50%, $about-gradient-color-1 0%, $about-gradient-color-2 53.79%, $about-gradient-color-3 100%), url('/src/assets/images/about-bg.png') no-repeat center; 
-    }
+    .about-container { background: radial-gradient(39.89% 31.89% at 50% 50%, $about-gradient-color-1 0%, $about-gradient-color-2 53.79%, $about-gradient-color-3 100%), url('/src/assets/images/about-bg.png') no-repeat center; }
 } 
