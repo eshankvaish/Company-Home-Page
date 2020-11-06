@@ -5,12 +5,15 @@ $container-width-large-desktop: 1205px;
 $topbar-tablet-desktop-min-height: 80px;
 
 /*Breakpoints for various devices*/
+$mobile-min-width: 320px;
 $tablet-min-width: 768px;
 $tablet-max-width: 1024px;
 $desktop-min-width: 1025px;
 $desktop-max-width: 1439px;
-$large-desktop-max-width: 1439px;
-$large-desktop-max-width: 1439px;
+$large-desktop-min-width: 1440px;
+$large-desktop-max-width: 1800px;
+$large-display-min-width: 2500px;
+
 
 /*Paddings*/
 $primary-padding: 20px;
@@ -33,3 +36,18 @@ $header-bg-color: rgba(0, 0, 0, 0.13);
 $menu-bg-color: #f8f8f8;
 $menu-hover-color: #e1e1e1;
 $nav-items-text-color: #65666B;
+
+/*Main Container*/
+$about-child-max-width-mobile: 240px;
+$about-child-max-width-tablet: 348px;
+$about-child-max-width-desktop: 464px;
+$about-child-max-width-large-desktop: 593px;
+$description-text-shadow-color: rgba(0, 0, 0, 0.25);
+$about-gradient-color-1: rgba(5, 5, 5, 0.0001);
+$about-gradient-color-2: rgba(7, 7, 7, 0.108473);
+$about-gradient-color-3: #030F21;
+$about-bg-gradient-color-mobile-1: rgba(5, 5, 5, 0.64221);
+$about-bg-gradient-color-mobile-2: rgba(70, 70, 70, 0.726478);
+$about-bg-gradient-color-mobile-3: rgba(154, 154, 154, 0.0001);
+$about-bg-gradient-color-mobile-4: rgba(160, 160, 160, 0.0001);
+$about-bg-gradient-color-mobile-5: rgba(216, 216, 216, 0.0001)

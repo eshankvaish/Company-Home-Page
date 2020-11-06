@@ -36,7 +36,19 @@
 
 //Mixin for large desktop related media queries
 @mixin breakpoint-large-desktop {
-    @media screen and (min-width: $large-desktop-max-width) {
+    @media screen and (min-width: $large-desktop-min-width) {
+        @content;
+    }
+}
+
+@mixin breakpoint-large-display {
+    @media screen and (min-width: $large-display-min-width) {
+        @content;
+    }
+}
+
+@mixin breakpoint-custom($max-width) {
+    @media screen and (max-width: $max-width) {
         @content;
     }
 }
