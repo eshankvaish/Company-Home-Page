@@ -29,6 +29,8 @@
             letter-spacing: 1.29px;
             color: $color-primary;
             margin-top: 25px;
+
+            &:hover { color: $primary-gradient-bg-color; }
         }
     }
 }
@@ -69,7 +71,7 @@
         font-weight: bold;
     }
 }
-
+/*Media Queries for Tablet*/
 @include breakpoint-tablet {
     .solutions {
         flex-direction: row;
@@ -118,7 +120,7 @@
         }
     }
 }
-
+/*Media Queries for Desktop*/
 @include breakpoint-desktop {
     .solutions {
         min-height: 564px;
@@ -160,7 +162,7 @@
         }
     }
 }
-
+/*Media Queries for Large Desktop*/
 @include breakpoint-large-desktop {
     .solutions {
         min-height: 650px;

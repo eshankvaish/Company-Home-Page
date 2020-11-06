@@ -44,7 +44,7 @@
         font-weight: 300;
     }
 }
-
+/*Media Queries for Tablet*/
 @include breakpoint-tablet {
     .company-advantage-container { background: linear-gradient(70.77deg, $secondary-bg-color-1 31.97%, $secondary-bg-color-3 101.93%); }
     .company-advantage {
@@ -82,17 +82,17 @@
         &__description { font-size: 1.4rem; }
     }    
     .advantage{
+        //Order changed when the screen width increases using flexbox order property
         &-deployment { order: 1; }
         &-investments { order: 3; }
         &-profit { order: 5; }
         &-intelligence { order: 2; }
         &-awareness { order: 4; }
         &-guidance { order: 6; }
-
         &-profit, &-investments, &-awareness, &-guidance { margin-top: 36px; } 
     }
 }
-
+/*Media Queries for Desktop*/
 @include breakpoint-desktop {
     .company-advantage-container { background: linear-gradient(126.81deg, $secondary-bg-color-1 3.48%, $secondary-bg-color-3 116.85%); }
     .company-advantage {
@@ -120,7 +120,7 @@
     .advantage-container { padding: 60px 0; }
     .advantage { min-height: 183px; }
 }
-
+/*Media Queries for Large Desktop*/
 @include breakpoint-large-desktop {
     .company-advantage {
         min-height: 739px;
