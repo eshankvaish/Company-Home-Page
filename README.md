@@ -1,8 +1,9 @@
 # UI Advanced
-How to run:
-- intall npm using: "sudo apt install npm"
-- install nvm using "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash"
-- Execute 'nvm install 10.19.0'
-- nvm use 10.19.0
-- npm install
-- npm start
+- Install nvm on your system, ref: https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating
+- Execute 'nvm install 14.15.0'
+- Goto your project folder and execute:
+<code>
+    nvm use
+    npm install
+</code>
+- To convert the scss to css on save by running <code>npm start</code>

@@ -7,24 +7,22 @@
         padding-bottom: 20px;
 
         &--company-name {
-            @include set-line-height(2.75px);
+            @include set-line-height(0.275rem);
             font-size: 1.6rem;
             letter-spacing: 1.52px;
         }
         &--heading {
-            @include set-line-height;
             font-size: 2.3rem;
             letter-spacing: -0.33px;
             padding: 7px 0 10px;
         }
         &--description {
-            @include set-line-height;
             font-size: 1.6rem;
             letter-spacing: -0.19px;
             font-weight: 300;
         }
         &--learn-more {
-            @include set-line-height(2.41px);
+            @include set-line-height(0.241rem);
             font-size: 1.6rem;
             letter-spacing: 1.29px;
             color: $color-primary;
@@ -63,7 +61,7 @@
         background-size: cover;
     }
     &__img-caption {
-        @include set-line-height(3px);
+        @include set-line-height(0.3rem);
         @include flexbox(row, flex-start, center);
         padding: 0 10.18px;
         background-color: $secondary-text-color;
@@ -85,12 +83,12 @@
             max-width: 30%;
             
             &--company-name {
-                @include set-line-height(3.09px);
+                @include set-line-height(0.309rem);
                 font-size: 1.8rem;
                 letter-spacing: 1.71px;
             }
             &--heading {
-                @include set-line-height(2px);
+                @include set-line-height(0.2rem);
                 font-size: 2.6rem;
                 letter-spacing: -0.37px;
                 padding: 7px 0 15px;
@@ -124,23 +122,22 @@
 
         &__intro {            
             &--company-name {
-                @include set-line-height(3.44px);
+                @include set-line-height(0.344rem);
                 font-size: 2rem;
                 letter-spacing: 1.9px;
             }
             &--heading {
-                @include set-line-height;
                 font-size: 3rem;
                 letter-spacing: -0.31px;
                 padding: 10px 0 15px;
             }
             &--description {
-                @include set-line-height(6px);
+                @include set-line-height(0.6rem);
                 font-size: 1.7rem;
                 letter-spacing: -0.23px;
             }
             &--learn-more {
-                @include set-line-height(3px);
+                @include set-line-height(0.3em);
                 font-size: 1.7rem;
                 letter-spacing: 1.57px;
                 margin-top: 41.2px;
@@ -151,7 +148,7 @@
         min-height: 205px;
 
         &__img-caption {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             padding: 0 10px;
             max-width: 190px;
             min-height: 44px;
@@ -166,12 +163,12 @@
 
         &__intro {            
             &--company-name {
-                @include set-line-height(4.13px);
+                @include set-line-height(0.413rem);
                 font-size: 2.4rem;
                 letter-spacing: 1.98px;
             }
             &--heading {
-                @include set-line-height(2px);
+                @include set-line-height(0.2rem);
                 font-size: 3.8rem;
                 letter-spacing: -0.3px;
                 padding: 7px 0 15px;

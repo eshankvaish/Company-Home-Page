@@ -28,7 +28,7 @@
         padding: 20px $primary-padding 17px;
 
         &--content {
-            @include set-line-height(2.75px);
+            @include set-line-height(0.275rem);
             font-size: 1.6rem;
             display: block;
 
@@ -83,7 +83,7 @@
             padding: 0 11px 0 20px;
 
             &--content {
-                @include set-line-height(2px);
+                @include set-line-height(0.2rem);
                 font-size: 1.4rem;
                 color: $nav-items-text-color;
             }

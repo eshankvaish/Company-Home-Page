@@ -34,7 +34,7 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
     min-height: 126px;
 
     &__item {
-        @include set-line-height(5px);
+        @include set-line-height(0.5rem);
         font-size: 1.3rem;
         letter-spacing: 0.2px;
 
@@ -42,7 +42,7 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
     }
 }
 .copyright-bottom {
-    @include set-line-height(3.5px);
+    @include set-line-height(0.35rem);
     font-size: 0.95rem;
     letter-spacing: 0.24px;
     font-weight: 300;
@@ -78,7 +78,7 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
     .bottom-navbar { min-width: 205px; }
     .bottom-navlist { min-height: 130px; }
     .copyright-social {
-        @include set-line-height(1.89px);
+        @include set-line-height(0.189rem);
         font-size: 1.1rem;
         letter-spacing: 1.02px;
         font-weight: 300; 
@@ -106,13 +106,12 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
         min-height: 128px;
         
         &__item {
-            @include set-line-height;
             font-size: 1.4rem;
             letter-spacing: 0.22px;
         }
     }
     .copyright-social {
-        @include set-line-height(2.06px);
+        @include set-line-height(0.206rem);
         font-size: 1.2rem;
         letter-spacing: 1.11px;
     }
