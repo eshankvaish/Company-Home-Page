@@ -22,5 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     crossToggle.addEventListener('click', () => {
         toggleMenu('Cross');
+    });
+    topNavList.addEventListener('click', (e) => {
+        if(e.target.tagName === 'A') {
+            toggleMenu('Cross');
+        }
     });     
 });

@@ -31,6 +31,8 @@
             @include set-line-height(2.75px);
             font-size: 1.6rem;
             display: block;
+
+            &:hover { color: $color-primary; }
         }
     }
 }
@@ -39,7 +41,6 @@
     font-size: 2.5rem;
 }
 .toggle-active { display: block; }
-.top-nav-list__item--content:hover { color: $color-primary; }
 /*Media Queries for Tablets*/
 @include breakpoint-tablet {
     .top-navbar { padding: 0; }
