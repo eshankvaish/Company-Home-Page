@@ -68,28 +68,22 @@
         max-width: 65%;
         flex-direction: row;
         justify-content: space-between;
-        padding: 50px 0;
+        padding: 50px 0 0;
+
+        &__item { max-width: 48%; }
     }
     .advantage {
-        max-width: 48%;
         margin: auto;
         
         &__heading {
             font-size: 1.6rem;
             padding: 8px 0;
-            max-width: 150px;
+            max-width: 155px;
         }
         &__description { font-size: 1.4rem; }
     }    
     .advantage{
-        //Order changed when the screen width increases using flexbox order property
-        &-deployment { order: 1; }
-        &-investments { order: 3; }
-        &-profit { order: 5; }
-        &-intelligence { order: 2; }
-        &-awareness { order: 4; }
-        &-guidance { order: 6; }
-        &-profit, &-investments, &-awareness, &-guidance { margin-top: 36px; } 
+        &-profit, &-investments, &-awareness, &-guidance { margin-top: 45px; }
     }
 }
 /*Media Queries for Desktop*/
@@ -117,8 +111,11 @@
             }
         }
     }
-    .advantage-container { padding: 60px 0; }
-    .advantage { min-height: 183px; }
+    .advantage-container { padding: 60px 0 0; }
+    .advantage { 
+        min-height: 183px;
+        &-profit, &-investments, &-awareness, &-guidance { margin-top: 25px; }
+    }
 }
 /*Media Queries for Large Desktop*/
 @include breakpoint-large-desktop {
@@ -135,7 +132,7 @@
             &--description { padding: 16px 0 42px; }
         }
     }
-    .advantage-container { padding: 70px 0; }
+    .advantage-container { padding: 70px 0 0; }
     .advantage {
         min-height: 180px;
 

@@ -90,6 +90,6 @@
         }
     }
 }
-@include breakpoint-large-display {
+@include breakpoint-custom($large-desktop-max-width, min) {
     .about-container { background: radial-gradient(39.89% 31.89% at 50% 50%, $about-gradient-color-1 0%, $about-gradient-color-2 53.79%, $about-gradient-color-3 100%), url('/src/assets/images/about-bg.png') no-repeat center; }
 } 

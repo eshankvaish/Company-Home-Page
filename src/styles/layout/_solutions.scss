@@ -37,6 +37,8 @@
 .solution-container {
     @include flexbox(column, space-between);
     width: 100%;
+
+    &__item { width: 100%; }
 }
 .solution {
     min-height: 220px;
@@ -98,18 +100,13 @@
     }
     .solution-container {
         flex-direction: row;
-        width: auto;
         max-width: 65%;
         justify-content: space-between;
+
+        &__item { max-width: 48%; }
     }
     .solution {
-        max-width: 48%;
         min-height: 205px;
-
-        &__drill { order: 1; }
-        &__transport { order: 3; }
-        &__oilfield { order: 2; }
-        &__operators { order: 4; }
 
         &__img-caption {
             @include flexbox(row, flex-start, center);
