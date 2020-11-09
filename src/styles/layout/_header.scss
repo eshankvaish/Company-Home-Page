@@ -4,6 +4,12 @@ header {
     top: 0;
     background-color: $secondary-text-color;
     box-shadow: 0px -3px 19px $header-bg-color;
+    transition: opacity 0.5s linear; //Transition when the header shows back on scroll up
+}
+//For hiding the header on scroll down
+.hide-header {
+    position: absolute;
+    opacity: 0;
 }
 .top-navbar { @include flexbox(row, space-between); }
 .logo-container {

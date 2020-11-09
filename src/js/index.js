@@ -4,6 +4,8 @@
     const crossToggle = document.querySelector('.logo-toggle__cross');
     const topNavList = document.querySelector('.top-nav-list');
     const body = document.querySelector('body');
+    const header = document.querySelector('header');
+    let previousScrollPosition = window.pageYOffset; //Current Scroll Position
     
     function toggleMenu(clickedOn) {
         if(clickedOn === 'Hamburger') {
@@ -28,5 +30,16 @@
         } else if(e.target.classList.contains('top-nav-list__item--content')) {
             toggleMenu('Cross');
         }  
-    });    
+    });  
+
+    //For hiding the navbar on scroll down and show on scroll up
+    window.addEventListener('scroll', function() {
+        let currentScrollPosition = window.pageYOffset;
+        if(currentScrollPosition < previousScrollPosition) {
+            header.classList.remove('hide-header');
+        } else if (currentScrollPosition > 100) {
+            header.classList.add('hide-header');
+        }
+        previousScrollPosition = window.pageYOffset;  //storing the current position
+    });
 })();
