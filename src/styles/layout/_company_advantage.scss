@@ -31,7 +31,6 @@
     &__heading {
         font-size: 1.5rem;
         padding: 8px 0;
-        max-width: 150px;
     }
     &__description {
         @include set-line-height(0.5rem);
@@ -73,7 +72,6 @@
         &__heading {
             font-size: 1.6rem;
             padding: 8px 0;
-            max-width: 155px;
         }
         &__description { font-size: 1.4rem; }
     }    
@@ -90,9 +88,7 @@
         &__intro {
             padding-top: 60px;
 
-            &--heading {
-                font-size: 3rem;
-            }
+            &--heading { font-size: 3rem; }
             &--description {
                 @include set-line-height(0.5rem);
                 font-size: 1.8rem;
