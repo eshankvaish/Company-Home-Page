@@ -6,6 +6,7 @@
     const body = document.querySelector('body');
     const header = document.querySelector('header');
     let previousScrollPosition = window.pageYOffset; //Current Scroll Position
+    let menuOpen = false;
 
     document.querySelector('.copyright__year').innerHTML = new Date().getFullYear(); //Setting the year dynamically
     
@@ -16,11 +17,13 @@
             crossToggle.classList.add('toggle-active');
             topNavList.classList.add('toggle-active');
             body.classList.add('overflow-hidden');
+            menuOpen = true;
         } else {
             hamburgerToggle.classList.add('toggle-active');
             crossToggle.classList.remove('toggle-active');
             topNavList.classList.remove('toggle-active');
             body.classList.remove('overflow-hidden');
+            menuOpen = false;
         }
     }
 
@@ -40,7 +43,7 @@
         let currentScrollPosition = window.pageYOffset;
         if(currentScrollPosition < previousScrollPosition) {
             header.classList.remove('hide-header');
-        } else if (currentScrollPosition > 100) {
+        } else if (currentScrollPosition > 100 && !menuOpen) {
             header.classList.add('hide-header');
         }
         previousScrollPosition = window.pageYOffset;  //storing the current position
