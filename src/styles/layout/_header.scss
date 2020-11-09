@@ -1,3 +1,10 @@
+header {
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    background-color: $secondary-text-color;
+    box-shadow: 0px -3px 19px $header-bg-color;
+}
 .top-navbar { @include flexbox(row, space-between); }
 .logo-container {
     @include flexbox(row, space-between, center);
