@@ -6,7 +6,10 @@
     const body = document.querySelector('body');
     const header = document.querySelector('header');
     let previousScrollPosition = window.pageYOffset; //Current Scroll Position
+
+    document.querySelector('.copyright__year').innerHTML = new Date().getFullYear(); //Setting the year dynamically
     
+    //Function for Toggling the Navigation Bar in Mobile View
     function toggleMenu(clickedOn) {
         if(clickedOn === 'Hamburger') {
             hamburgerToggle.classList.remove('toggle-active');
