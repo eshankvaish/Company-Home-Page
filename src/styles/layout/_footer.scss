@@ -1,7 +1,11 @@
-footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%, $color-primary 85.03%); }
+footer {
+    background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%, $color-primary 85.03%);
+    min-height: 295px;
+    position: relative;
+}
 .bottom-bar {
     @include flexbox(column, space-evenly);
-    min-height: 295px;
+    min-height: 257px;
     padding: 0 20px;
     color: $primary-text-color;
 }
@@ -41,15 +45,17 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
         &:hover { color: $secondary-text-color; }  //hover effect
     }
 }
-.copyright-bottom {
+.copyright {
     @include set-line-height(0.35rem);
+    position: absolute;
+    bottom: 25px;
     font-size: 0.95rem;
     letter-spacing: 0.24px;
     font-weight: 300;
 }
-.copyright-social { display: none; }
 /*Media Queries for Tablet*/
 @include breakpoint-tablet {
+    footer { min-height: auto; }
     .bottom-bar {
         //Change Flex Direction
         flex-direction: row;
@@ -57,7 +63,6 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
         align-items: center;
         min-height: 186px;
     }
-    .copyright-bottom { display: none; }
     .social-container {
         min-height: 83px;
     
@@ -77,8 +82,9 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
     }
     .bottom-navbar { min-width: 205px; }
     .bottom-navlist { min-height: 130px; }
-    .copyright-social {
+    .copyright {
         @include set-line-height(0.189rem);
+        position: static;
         font-size: 1.1rem;
         letter-spacing: 1.02px;
         font-weight: 300; 
@@ -110,7 +116,7 @@ footer { background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%
             letter-spacing: 0.22px;
         }
     }
-    .copyright-social {
+    .copyright {
         @include set-line-height(0.206rem);
         font-size: 1.2rem;
         letter-spacing: 1.11px;
