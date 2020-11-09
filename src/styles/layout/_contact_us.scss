@@ -11,20 +11,18 @@
     padding: 0 $primary-padding;
 
     &__heading {
-        @include set-line-height;
         font-size: 2.3rem;
         letter-spacing: -0.33px;
         
         &--item { display: block; }
     }
     &__description {
-        @include set-line-height;
         font-size: 1.6rem;
         padding: 10px 0 26px;
         font-weight: 300;
     }
     &__schedule {
-        @include set-line-height(2px);
+        @include set-line-height(0.2rem);
         font-size: 1.4rem;
         letter-spacing: 1.575px;
 
@@ -38,7 +36,7 @@
         min-height: 273px;
 
         &__heading {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             font-size: 2.6rem;
             letter-spacing: -0.28px;
         }
@@ -47,7 +45,7 @@
             max-width: 340px;
         }
         &__schedule {
-            @include set-line-height(3px);
+            @include set-line-height(0.3rem);
             font-size: 1.6rem;
             letter-spacing: 1.8px;
         }
@@ -59,12 +57,11 @@
         min-height: 350px;
 
         &__heading {
-            @include set-line-height;
             font-size: 3rem;
             letter-spacing: -0.3px;
         }
         &__description {
-            @include set-line-height(5px);
+            @include set-line-height(0.5rem);
             font-size: 1.8rem;
             letter-spacing: -0.24px;
             padding: 17px 0 45px;
@@ -82,7 +79,7 @@
         min-height: 347px;
 
         &__heading {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             font-size: 3.8rem;
         }
         &__description {

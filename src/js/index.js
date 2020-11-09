@@ -1,9 +1,10 @@
-const hamburgerToggle = document.querySelector('.logo-toggle__hamburger');
-const crossToggle = document.querySelector('.logo-toggle__cross');
-const topNavList = document.querySelector('.top-nav-list');
-const body = document.querySelector('body');
-
-document.addEventListener('DOMContentLoaded', function() {
+//using IIFE
+(function() {
+    const hamburgerToggle = document.querySelector('.logo-toggle__hamburger');
+    const crossToggle = document.querySelector('.logo-toggle__cross');
+    const topNavList = document.querySelector('.top-nav-list');
+    const body = document.querySelector('body');
+    
     function toggleMenu(clickedOn) {
         if(clickedOn === 'Hamburger') {
             hamburgerToggle.classList.remove('toggle-active');
@@ -17,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('overflow-hidden');
         }
     }
-    hamburgerToggle.addEventListener('click', () => {
-        toggleMenu('Hamburger');
-    });
-    crossToggle.addEventListener('click', () => {
-        toggleMenu('Cross');
-    });
-    topNavList.addEventListener('click', (e) => {
-        if(e.target.tagName === 'A') {
+
+    //Using Event Delegation
+    document.addEventListener('click', function(e) {
+        if(e.target.classList.contains('logo-toggle__hamburger')) {
+            toggleMenu('Hamburger');
+        } else if(e.target.classList.contains('logo-toggle__cross')) {
             toggleMenu('Cross');
-        }
-    });     
-});
+        } else if(e.target.classList.contains('top-nav-list__item--content')) {
+            toggleMenu('Cross');
+        }  
+    });    
+})();

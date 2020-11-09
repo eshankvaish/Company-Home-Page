@@ -1,0 +1,132 @@
+footer {
+    background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%, $color-primary 85.03%);
+    min-height: 295px;
+    position: relative;
+}
+.bottom-bar {
+    @include flexbox(column, space-evenly);
+    min-height: 257px;
+    padding: 0 20px;
+    color: $primary-text-color;
+}
+.social-container {
+    @include flexbox(column, space-between);
+    min-height: 66px;
+
+    &__logo {
+        min-width: 77px;
+        min-height: 28px;
+
+        &--img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.social-icons {
+    @include flexbox(row, space-between);
+    min-width: 161px;
+
+    &__icon { font-size: 2.8rem; }
+}
+.bottom-navbar {
+    @include flexbox(row, space-between);
+    min-width: 200px;
+}
+.bottom-navlist {
+    @include flexbox(column, space-between);
+    min-height: 126px;
+
+    &__item {
+        @include set-line-height(0.5rem);
+        font-size: 1.3rem;
+        letter-spacing: 0.2px;
+
+        &:hover { color: $secondary-text-color; }  //hover effect
+    }
+}
+.copyright {
+    @include set-line-height(0.35rem);
+    position: absolute;
+    bottom: 25px;
+    font-size: 0.95rem;
+    letter-spacing: 0.24px;
+    font-weight: 300;
+}
+/*Media Queries for Tablet*/
+@include breakpoint-tablet {
+    footer { min-height: auto; }
+    .bottom-bar {
+        //Change Flex Direction
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 186px;
+    }
+    .social-container {
+        min-height: 83px;
+    
+        &__logo {
+            min-width: 110px;
+            min-height: 37px;
+        }
+    }
+    .social-icons {
+        min-width: 150px;
+    
+        &__icon { font-size: 2.7rem; }
+    }
+    .social-copyright {
+        @include flexbox(column, space-between);
+        min-height: 130px;
+    }
+    .bottom-navbar { min-width: 205px; }
+    .bottom-navlist { min-height: 130px; }
+    .copyright {
+        @include set-line-height(0.189rem);
+        position: static;
+        font-size: 1.1rem;
+        letter-spacing: 1.02px;
+        font-weight: 300; 
+        display: block;
+    }
+}
+/*Media Queries for Desktop*/
+@include breakpoint-desktop {
+    .social-container {
+        min-height: 83px;
+    
+        &__logo {
+            min-width: 123px;
+            min-height: 41px;
+        }
+    }
+    .social-icons {
+        min-width: 192px;
+    
+        &__icon { font-size: 3rem; }
+    }
+    .social-copyright { min-height: 128px; }
+    .bottom-navbar { min-width: 244px; }
+    .bottom-navlist {
+        min-height: 128px;
+        
+        &__item {
+            font-size: 1.4rem;
+            letter-spacing: 0.22px;
+        }
+    }
+    .copyright {
+        @include set-line-height(0.206rem);
+        font-size: 1.2rem;
+        letter-spacing: 1.11px;
+    }
+}
+/*Media Queries for Lrge Desktop*/
+@include breakpoint-large-desktop {
+    .bottom-bar { min-height: 206px; }
+}
+/*Media Queries for Large Displays*/
+@include breakpoint-large-display {
+    .bottom-navbar { min-width: 291px; }
+}

@@ -8,18 +8,14 @@
     color: $secondary-text-color;
     
     &__intro {
-        &--heading {
-            @include set-line-height;
-            font-size: 2.3rem;
-        }
+        &--heading { font-size: 2.3rem; }
         &--description {
             padding: 10px 0 25px;
-            @include set-line-height;
             font-size: 1.6rem;
             font-weight: 300;
         }
         &--learn-more {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             font-size: 1.4rem;
             letter-spacing: 1.29px;
 
@@ -33,12 +29,11 @@
 
     &__icon { font-size: 3.5rem; }
     &__heading {
-        @include set-line-height;
         font-size: 1.5rem;
         padding: 8px 0;
     }
     &__description {
-        @include set-line-height(5px);
+        @include set-line-height(0.5rem);
         font-size: 1.3rem;
         font-weight: 300;
     }
@@ -55,7 +50,7 @@
             max-width: 30%;
             padding-top: 50px;
             &--heading {
-                @include set-line-height(2px);
+                @include set-line-height(0.2rem);
                 font-size: 2.6rem;
             }
             &--description {
@@ -95,12 +90,12 @@
 
             &--heading { font-size: 3rem; }
             &--description {
-                @include set-line-height(5px);
+                @include set-line-height(0.5rem);
                 font-size: 1.8rem;
                 padding: 15px 0 45px;
             }
             &--learn-more {
-                @include set-line-height(2.92px);
+                @include set-line-height(0.292rem);
                 font-size: 1.7rem;
                 letter-spacing: 1.57px;
             }
@@ -121,7 +116,7 @@
             padding-top: 70px;
 
             &--heading {
-                @include set-line-height(2px);
+                @include set-line-height(0.2rem);
                 font-size: 3.8rem;
             }
             &--description { padding: 16px 0 42px; }

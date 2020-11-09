@@ -16,7 +16,7 @@
     }
 }
 
-@mixin set-line-height($value: 4px) {
+@mixin set-line-height($value: 0) {
     line-height: calc(1em + #{$value});
 }
 

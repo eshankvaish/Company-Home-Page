@@ -22,18 +22,16 @@
     padding-bottom: 30px;
 
     &__company-name{
-        @include set-line-height(3px);
+        @include set-line-height(0.3rem);
         font-size: 1.6rem;
         letter-spacing: 1.52px;
     }
     &__heading {
-        @include set-line-height;
         font-size: 2.3rem;
         padding: 6px 0 10px;
         max-width: 271px;
     }
     &__description {
-        @include set-line-height;
         font-size: 1.6rem;
         font-weight: 300;
     }
@@ -49,18 +47,17 @@
 
     &__icon { font-size: 3.8rem; }
     &__heading {
-        @include set-line-height;
         padding: 8px 0;
         font-size: 1.5rem;
         max-width: 148px;
     }
     &__description {
-        @include set-line-height(5px);
+        @include set-line-height(0.5rem);
         font-size: 1.3rem;
         font-weight: 300;
     }
     &__learn-more {
-        @include set-line-height(2px);
+        @include set-line-height(0.2rem);
         font-size: 1.5rem;
         letter-spacing: 1.2px;
         color: $color-primary;
@@ -90,19 +87,19 @@
     }
     .what-we-do {
         &__company-name {
-            @include set-line-height(3.09px);
+            @include set-line-height(0.309rem);
             letter-spacing: 1.71px;
             font-size: 1.8rem;
         }
         &__heading {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             font-size: 2.6rem;
             max-width: 259px;
         }
     }
     .service {
         &__heading {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             font-size: 1.6rem;
             max-width: 164px;
         }
@@ -128,24 +125,23 @@
     }
     .what-we-do {
         &__company-name {
-            @include set-line-height(3.44px);
+            @include set-line-height(0.344rem);
             letter-spacing: 1.9px;
             font-size: 2.0rem;
         }
         &__heading {
-            @include set-line-height(4px);
+            @include set-line-height(0.4rem);
             font-size: 3.0rem;
             max-width: 259px;
         }
         &__description {
-            @include set-line-height(6px);
+            @include set-line-height(0.6rem);
             font-size: 1.7rem;
         }
     }
     .service {
         &__icon { font-size: 4.5rem; }
         &__heading {
-            @include set-line-height;
             font-size: 1.6rem;
             max-width: 164px;
         }
@@ -167,12 +163,12 @@
     }
     .what-we-do {
         &__company-name {
-            @include set-line-height(4.13px);
+            @include set-line-height(0.413rem);
             letter-spacing: 1.98px;
             font-size: 2.4rem;
         }
         &__heading {
-            @include set-line-height(2px);
+            @include set-line-height(0.2rem);
             font-size: 3.8rem;
             max-width: 315px;
         }
@@ -184,7 +180,6 @@
     .service {
         &__icon { font-size: 4.5rem; }
         &__heading {
-            @include set-line-height;
             font-size: 2.0rem;
             max-width: 200px;
         }
