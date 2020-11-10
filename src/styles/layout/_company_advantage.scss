@@ -1,5 +1,5 @@
 .company-advantage-container {
-    background: linear-gradient(70.26deg, $secondary-bg-color-1 22.16%, $secondary-bg-color-2 140.31%, #40465C 140.37%);
+    background: linear-gradient(70.26deg, $secondary-bg-color-1 22.16%, $secondary-bg-color-2 140.31%, $secondary-bg-color-3 140.37%);
     box-shadow: 0 5px 16px $header-bg-color;
 
     @include breakpoint-tablet {
@@ -153,6 +153,7 @@
             
         }
     }
+    /*Individual Classes for adding margin on items except from row-1*/
     &-profit, &-investments, &-awareness, &-guidance {
         @include breakpoint-tablet {
             margin-top: 45px; 

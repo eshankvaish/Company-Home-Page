@@ -3,15 +3,18 @@
     padding: 45px $primary-padding;
     color: $primary-text-color;
 
+    /*Media Queries for Tablet*/
     @include breakpoint-tablet {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         min-height: 534px;
     }
+    /*Media Queries for Desktop*/
     @include breakpoint-desktop {
         min-height: 564px;
     }
+    /*Media Queries for Large Desktop*/
     @include breakpoint-large-desktop {
         min-height: 650px;
     }
@@ -135,7 +138,7 @@
     @include breakpoint-large-desktop {
         min-height: 231px;
     }
-
+    /*To set background images in respective cards*/
     &--drill {
         background: url('/src/assets/images/drill.jpg') no-repeat center;
     }
@@ -148,6 +151,7 @@
     &--operators {
         background: url('/src/assets/images/stage-operators.jpg') no-repeat center; 
     }
+    //Styles for Caption
     &__img-caption {
         @include set-line-height(0.3rem);
         @include flexbox(row, flex-start, center);
@@ -181,5 +185,6 @@
     }
 }
 .solution {
+    //Background size is specified after background property
     background-size: cover;
 }

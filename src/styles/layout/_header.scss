@@ -16,7 +16,7 @@ header {
     @include flexbox(row, space-between); 
 
     @include breakpoint-tablet {
-        padding: 0; 
+        padding: 0; //padding reset
     }
 }
 .logo-container {
@@ -41,9 +41,6 @@ header {
     @include breakpoint-tablet {
         width: 108px;
         height: 40px;
-    }
-    @include breakpoint-desktop {
-        
     }
 
     &__img {
