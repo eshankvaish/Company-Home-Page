@@ -44,19 +44,19 @@
     width: 100%;
     margin-top: 10px;
 
-    &__drill {
+    &--drill {
         background: url('/src/assets/images/drill.png') no-repeat center;
         background-size: cover;
     }
-    &__transport {
+    &--transport {
         background: url('/src/assets/images/production.png') no-repeat center; 
         background-size: cover;
     }
-    &__oilfield {
+    &--oilfield {
         background: url('/src/assets/images/oilfield.png') no-repeat center;
         background-size: cover;
     }
-    &__operators {
+    &--operators {
         background: url('/src/assets/images/stage operators.png') no-repeat center; 
         background-size: cover;
     }

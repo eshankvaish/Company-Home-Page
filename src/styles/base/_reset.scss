@@ -9,7 +9,9 @@
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
-html { font-size: $font-size; }
+html {
+	font-size: $base-font-size;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -35,7 +37,9 @@ a {
 	font-size: inherit;
 	color: inherit;
 }
-a:focus { background-color: inherit; }
+a:focus {
+	background-color: inherit;
+}
 h1 { font-size: 3.2rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 2.08rem; }
