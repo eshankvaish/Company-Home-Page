@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak-as: never;
+    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -24,61 +24,65 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.icon-close:before {
-    content: "\e908";
-}
-.icon-menu:before {
-    content: "\e90e";
+  
+.icon-angle-right:before {
+    content: "\e90f";
 }
 .icon-diamond:before {
-    content: "\e900";
-    color: #ef7622;
-}
-.icon-eye:before {
-    content: "\e901";
-    color: #ef7622;
-}
-.icon-facebook:before {
-    content: "\e902";
-    color: #fff;
-}
-.icon-flow-chart:before {
     content: "\e903";
     color: #ef7622;
 }
-.icon-growth:before {
+.icon-eye:before {
     content: "\e904";
     color: #ef7622;
 }
-.icon-linear-growth:before {
+.icon-facebook:before {
     content: "\e905";
-    color: #ef7622;
-}
-.icon-linkedin:before {
-    content: "\e906";
     color: #fff;
 }
-.icon-money-growth:before {
+.icon-flow-chart:before {
+    content: "\e906";
+    color: #ef7622;
+}
+.icon-growth:before {
     content: "\e907";
     color: #ef7622;
 }
-.icon-square:before {
+.icon-linear-growth:before {
+    content: "\e908";
+    color: #ef7622;
+}
+.icon-linkedin:before {
+    content: "\e900";
+    color: #fff;
+}
+.icon-money-growth:before {
     content: "\e909";
     color: #ef7622;
 }
-.icon-tower:before {
+.icon-square:before {
     content: "\e90a";
     color: #ef7622;
 }
-.icon-twitter:before {
+.icon-tower:before {
     content: "\e90b";
-    color: #fff;
+    color: #ef7622;
 }
-.icon-Vimeo:before {
+.icon-twitter:before {
     content: "\e90c";
     color: #fff;
 }
-.icon-window-reload:before {
+.icon-Vimeo:before {
     content: "\e90d";
+    color: #fff;
+}
+.icon-window-reload:before {
+    content: "\e90e";
     color: #ef7622;
+}
+.icon-close:before {
+    content: "\e901";
+}
+.icon-menu:before {
+    content: "\e902";
 }
