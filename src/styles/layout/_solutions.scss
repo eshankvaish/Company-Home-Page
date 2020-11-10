@@ -3,23 +3,80 @@
     padding: 45px $primary-padding;
     color: $primary-text-color;
 
+    @include breakpoint-tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 534px;
+    }
+    @include breakpoint-desktop {
+        min-height: 564px;
+    }
+    @include breakpoint-large-desktop {
+        min-height: 650px;
+    }
+
     &__intro {
         padding-bottom: 20px;
+
+        @include breakpoint-tablet {
+            max-width: 30%;
+        }
 
         &--company-name {
             @include set-line-height(0.275rem);
             font-size: 1.6rem;
             letter-spacing: 1.52px;
+
+            @include breakpoint-tablet {
+                @include set-line-height(0.309rem);
+                font-size: 1.8rem;
+                letter-spacing: 1.71px;
+            }
+            @include breakpoint-desktop {
+                @include set-line-height(0.344rem);
+                font-size: 2rem;
+                letter-spacing: 1.9px;
+            }
+            @include breakpoint-large-desktop {
+                @include set-line-height(0.413rem);
+                font-size: 2.4rem;
+                letter-spacing: 1.98px;
+            }
         }
         &--heading {
             font-size: 2.3rem;
             letter-spacing: -0.33px;
             padding: 7px 0 10px;
+
+            @include breakpoint-tablet {
+                @include set-line-height(0.2rem);
+                font-size: 2.6rem;
+                letter-spacing: -0.37px;
+                padding: 7px 0 15px;
+            }
+            @include breakpoint-desktop {
+                font-size: 3rem;
+                letter-spacing: -0.31px;
+                padding: 10px 0 15px;
+            }
+            @include breakpoint-large-desktop {
+                @include set-line-height(0.2rem);
+                font-size: 3.8rem;
+                letter-spacing: -0.3px;
+                padding: 7px 0 15px;
+            }
         }
         &--description {
             font-size: 1.6rem;
             letter-spacing: -0.19px;
             font-weight: 300;
+
+            @include breakpoint-desktop {
+                @include set-line-height(0.6rem);
+                font-size: 1.7rem;
+                letter-spacing: -0.23px;
+            }
         }
         &--learn-more {
             @include set-line-height(0.241rem);
@@ -28,7 +85,21 @@
             color: $color-primary;
             margin-top: 25px;
 
-            &:hover { color: $primary-gradient-bg-color; }
+            &:hover { 
+                color: $primary-gradient-bg-color; 
+            }
+            @include breakpoint-tablet {
+                margin-top: 35px;
+            }
+            @include breakpoint-desktop {
+                @include set-line-height(0.3em);
+                font-size: 1.7rem;
+                letter-spacing: 1.57px;
+                margin-top: 41px;
+            }
+            @include breakpoint-large-desktop {
+                margin-top: 37px; 
+            }
         }
     }
 }
@@ -36,7 +107,21 @@
     @include flexbox(column, space-between);
     width: 100%;
 
-    &__item { width: 100%; }
+    @include breakpoint-tablet {
+        flex-direction: row;
+        max-width: 65%;
+        justify-content: space-between;
+    }
+    &__item { 
+        width: 100%;
+
+        @include breakpoint-tablet {
+            max-width: 48%;
+        }
+        @include breakpoint-large-desktop {
+            
+        }
+    }
 }
 .solution {
     min-height: 220px;
@@ -44,21 +129,24 @@
     width: 100%;
     margin-top: 10px;
 
+    @include breakpoint-tablet {
+        min-height: 205px;
+    }
+    @include breakpoint-large-desktop {
+        min-height: 231px;
+    }
+
     &--drill {
-        background: url('/src/assets/images/drill.png') no-repeat center;
-        background-size: cover;
+        background: url('/src/assets/images/drill.jpg') no-repeat center;
     }
     &--transport {
-        background: url('/src/assets/images/production.png') no-repeat center; 
-        background-size: cover;
+        background: url('/src/assets/images/production.jpg') no-repeat center; 
     }
     &--oilfield {
-        background: url('/src/assets/images/oilfield.png') no-repeat center;
-        background-size: cover;
+        background: url('/src/assets/images/oilfield.jpg') no-repeat center;
     }
     &--operators {
-        background: url('/src/assets/images/stage operators.png') no-repeat center; 
-        background-size: cover;
+        background: url('/src/assets/images/stage-operators.jpg') no-repeat center; 
     }
     &__img-caption {
         @include set-line-height(0.3rem);
@@ -69,121 +157,29 @@
         min-height: 64px;
         font-size: 1.4rem;
         font-weight: bold;
-    }
-}
-/*Media Queries for Tablet*/
-@include breakpoint-tablet {
-    .solutions {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 534px;
 
-        &__intro {
-            max-width: 30%;
-            
-            &--company-name {
-                @include set-line-height(0.309rem);
-                font-size: 1.8rem;
-                letter-spacing: 1.71px;
-            }
-            &--heading {
-                @include set-line-height(0.2rem);
-                font-size: 2.6rem;
-                letter-spacing: -0.37px;
-                padding: 7px 0 15px;
-            }
-            &--learn-more { margin-top: 35px; }
-        }
-    }
-    .solution-container {
-        flex-direction: row;
-        max-width: 65%;
-        justify-content: space-between;
-
-        &__item { max-width: 48%; }
-    }
-    .solution {
-        min-height: 205px;
-
-        &__img-caption {
+        @include breakpoint-tablet {
             @include flexbox(row, flex-start, center);
             padding: 0 8px;
             max-width: 176px;
             min-height: 50px;
             font-size: 1.3rem;
         }
-    }
-}
-/*Media Queries for Desktop*/
-@include breakpoint-desktop {
-    .solutions {
-        min-height: 564px;
-
-        &__intro {            
-            &--company-name {
-                @include set-line-height(0.344rem);
-                font-size: 2rem;
-                letter-spacing: 1.9px;
-            }
-            &--heading {
-                font-size: 3rem;
-                letter-spacing: -0.31px;
-                padding: 10px 0 15px;
-            }
-            &--description {
-                @include set-line-height(0.6rem);
-                font-size: 1.7rem;
-                letter-spacing: -0.23px;
-            }
-            &--learn-more {
-                @include set-line-height(0.3em);
-                font-size: 1.7rem;
-                letter-spacing: 1.57px;
-                margin-top: 41.2px;
-            }
-        }
-    }
-    .solution {
-        min-height: 205px;
-
-        &__img-caption {
+        @include breakpoint-desktop {
             @include set-line-height(0.2rem);
             padding: 0 10px;
             max-width: 190px;
             min-height: 44px;
             font-size: 1.1rem;
         }
-    }
-}
-/*Media Queries for Large Desktop*/
-@include breakpoint-large-desktop {
-    .solutions {
-        min-height: 650px;
-
-        &__intro {            
-            &--company-name {
-                @include set-line-height(0.413rem);
-                font-size: 2.4rem;
-                letter-spacing: 1.98px;
-            }
-            &--heading {
-                @include set-line-height(0.2rem);
-                font-size: 3.8rem;
-                letter-spacing: -0.3px;
-                padding: 7px 0 15px;
-            }
-            &--learn-more { margin-top: 37px; }
-        }
-    }
-    .solution {
-        min-height: 231px;
-
-        &__img-caption {
+        @include breakpoint-large-desktop {
             padding: 0 13px;
             max-width: 245px;
             min-height: 56px;
             font-size: 1.4rem;
         }
     }
+}
+.solution {
+    background-size: cover;
 }

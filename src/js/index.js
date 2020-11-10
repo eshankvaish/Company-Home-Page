@@ -12,7 +12,7 @@
     
     //Function for Toggling the Navigation Bar in Mobile View
     function toggleMenu(clickedOn) {
-        if(clickedOn === 'Hamburger') {
+        if (clickedOn === 'Hamburger') {
             hamburgerToggle.classList.remove('toggle-active');
             crossToggle.classList.add('toggle-active');
             topNavList.classList.add('toggle-active');
@@ -29,11 +29,11 @@
 
     //Using Event Delegation
     document.addEventListener('click', function(e) {
-        if(e.target.classList.contains('logo-toggle__hamburger')) {
+        if (e.target.classList.contains('logo-toggle__hamburger')) {
             toggleMenu('Hamburger');
-        } else if(e.target.classList.contains('logo-toggle__cross')) {
+        } else if (e.target.classList.contains('logo-toggle__cross')) {
             toggleMenu('Cross');
-        } else if(e.target.classList.contains('top-nav-list__item--content')) {
+        } else if (e.target.classList.contains('top-nav-list__item--content')) {
             toggleMenu('Cross');
         }  
     });  
@@ -41,7 +41,7 @@
     //For hiding the navbar on scroll down and show on scroll up
     window.addEventListener('scroll', function() {
         let currentScrollPosition = window.pageYOffset;
-        if(currentScrollPosition < previousScrollPosition) {
+        if (currentScrollPosition < previousScrollPosition) {
             header.classList.remove('hide-header');
         } else if (currentScrollPosition > 100 && !menuOpen) {
             header.classList.add('hide-header');

@@ -9,7 +9,7 @@ module.exports = {
         filename: "index.js",
         publicPath: ASSET_PATH,
     },
-        devServer: {
+    devServer: {
         port: 3000,
         contentBase: path.join(__dirname, "/"),
         writeToDisk: true,
@@ -54,7 +54,7 @@ module.exports = {
                         // First we transform SASS to standard CSS
                         loader: "sass-loader",
                         options: {
-                        implementation: require("sass"),
+                            implementation: require("sass"),
                         },
                     },
                 ],
@@ -70,7 +70,7 @@ module.exports = {
                         // In options we can set different things like format
                         // and directory to save
                         options: {
-                        outputPath: "images",
+                            outputPath: "images",
                         },
                     },
                 ],

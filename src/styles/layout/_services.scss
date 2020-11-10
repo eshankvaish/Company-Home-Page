@@ -1,12 +1,25 @@
 .services-container {
-    background: linear-gradient(126.81deg, #F8AE47 3.48%, #EF7622 116.85%);
+    background: linear-gradient(126.81deg, $primary-gradient-bg-color 3.48%, $color-primary 116.85%);
     min-height: 1410px;
     position: relative;
     z-index: 0;
+
+    @include breakpoint-tablet {
+        padding-top: 50px;
+        min-height: 1000px;
+    }
+    @include breakpoint-desktop {
+        padding-top: 60px;
+        min-height: 1127px;
+    }
+    @include breakpoint-large-desktop {
+        padding-top: 70px;
+        min-height: 1161px;
+    }
 }
 .services-other-bg-container {
     /*For background at the bottom of the container*/
-    background: url('/src/assets/images/services-bg.png') no-repeat center;
+    background: url('/src/assets/images/services-bg.jpg') no-repeat center;
     background-size: cover;
     min-height: 396px;
     width: 100%;
@@ -17,25 +30,99 @@
 .services {
     @include flexbox(column);
     padding: 45px $primary-padding 0;
+
+    @include breakpoint-custom($mobile-min-width) {
+        min-height: 340px; 
+    }
+    @include breakpoint-tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 .what-we-do {
     padding-bottom: 30px;
+
+    @include breakpoint-tablet {
+        flex: 49%;
+        min-height: 300px;
+        margin-bottom: 12px;
+        padding: 24px 24px 30px;
+    }
+    @include breakpoint-desktop {
+        min-height: 363px;
+        margin-bottom: 15px;
+        padding: 36px 32px 60px;
+    }
+    @include breakpoint-large-desktop {
+        min-height: 350px;
+        margin-bottom: 20px;
+        padding: 54px 41px 41px;
+    }
 
     &__company-name{
         @include set-line-height(0.3rem);
         font-size: 1.6rem;
         letter-spacing: 1.52px;
+
+        @include breakpoint-tablet {
+            @include set-line-height(0.309rem);
+            letter-spacing: 1.71px;
+            font-size: 1.8rem;
+        }
+        @include breakpoint-desktop {
+            @include set-line-height(0.344rem);
+            letter-spacing: 1.9px;
+            font-size: 2.0rem;
+        }
+        @include breakpoint-large-desktop {
+            @include set-line-height(0.413rem);
+            letter-spacing: 1.98px;
+            font-size: 2.4rem;
+        }
     }
     &__heading {
         font-size: 2.3rem;
         padding: 6px 0 10px;
         max-width: 271px;
+
+        @include breakpoint-tablet {
+            @include set-line-height(0.2rem);
+            font-size: 2.6rem;
+            max-width: 259px;
+        }
+        @include breakpoint-desktop {
+            @include set-line-height(0.4rem);
+            font-size: 3.0rem;
+            max-width: 259px;
+        }
+        @include breakpoint-large-desktop {
+            @include set-line-height(0.2rem);
+            font-size: 3.8rem;
+            max-width: 315px;
+        }
     }
     &__description {
         font-size: 1.6rem;
         font-weight: 300;
+
+        @include breakpoint-desktop {
+            @include set-line-height(0.6rem);
+            font-size: 1.7rem;
+        }
     }
-    &__img { display: none; }
+    &__img {
+        display: none;
+
+        @include breakpoint-large-desktop {
+            display: block;
+            padding: 5px 12px 0 0;
+        }
+    }
+}
+.description-container {
+    @include breakpoint-large-desktop {
+        display: flex;
+    }
 }
 .service {
     @include flexbox(column, space-between);
@@ -45,16 +132,64 @@
     color: $primary-text-color;
     min-height: 283px;
 
-    &__icon { font-size: 3.8rem; }
+    @include breakpoint-tablet {
+        flex: 49%;
+        min-height: 300px;
+        margin-bottom: 12px;
+        padding: 24px 24px 30px;
+    }
+    @include breakpoint-desktop {
+        min-height: 363px;
+        margin-bottom: 15px;
+        padding: 36px 32px 60px;
+    }
+    @include breakpoint-large-desktop {
+        min-height: 350px;
+        margin-bottom: 20px;
+        padding: 54px 41px 41px;
+    }
+
+    &__icon { 
+        font-size: 3.8rem; 
+        color: $color-primary;
+
+        @include breakpoint-desktop {
+            font-size: 4.5rem;
+        }
+        @include breakpoint-large-desktop {
+            font-size: 4.5rem;
+        }
+    }
     &__heading {
         padding: 8px 0;
         font-size: 1.5rem;
         max-width: 148px;
+
+        @include breakpoint-tablet {
+            @include set-line-height(0.2rem);
+            font-size: 1.6rem;
+            max-width: 164px;
+        }
+        @include breakpoint-desktop {
+            font-size: 1.6rem;
+            max-width: 164px;
+        }
+        @include breakpoint-large-desktop {
+            font-size: 2.0rem;
+            max-width: 200px;
+        }
     }
     &__description {
         @include set-line-height(0.5rem);
         font-size: 1.3rem;
         font-weight: 300;
+
+        @include breakpoint-tablet {
+            font-size: 1.4rem; 
+        }
+        @include breakpoint-desktop {
+            font-size: 1.4rem; 
+        }
     }
     &__learn-more {
         @include set-line-height(0.2rem);
@@ -62,127 +197,24 @@
         letter-spacing: 1.2px;
         color: $color-primary;
 
-        &:hover { color: $primary-gradient-bg-color; }
-    }
-}
-/*Custom Breakpoint for very small devices*/
-@include breakpoint-custom($mobile-min-width) {
-    .service { min-height: 340px; }
-}
-/*Media Queries for Tablet*/
-@include breakpoint-tablet {
-    .services-container {
-        padding-top: 50px;
-        min-height: 1000px;
-    }
-    .services {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .what-we-do, .service {
-        flex: 49%;
-        min-height: 300px;
-        margin-bottom: 12px;
-        padding: 24px 24px 30px;
-    }
-    .what-we-do {
-        &__company-name {
-            @include set-line-height(0.309rem);
-            letter-spacing: 1.71px;
-            font-size: 1.8rem;
+        &:hover { 
+            color: $primary-gradient-bg-color; 
         }
-        &__heading {
-            @include set-line-height(0.2rem);
-            font-size: 2.6rem;
-            max-width: 259px;
-        }
-    }
-    .service {
-        &__heading {
-            @include set-line-height(0.2rem);
-            font-size: 1.6rem;
-            max-width: 164px;
-        }
-        &__description { font-size: 1.4rem; }
-        &__learn-more {
+        @include breakpoint-tablet {
             @include set-line-height(2.41px);
             font-size: 1.4rem;
             letter-spacing: 1.29px;
         }
     }
-    .service-assets, .service-analytics { margin-left: 12px; }
-}
-/*Media Queries for Desktop*/
-@include breakpoint-desktop {
-    .services-container {
-        padding-top: 60px;
-        min-height: 1127px;
-    }
-    .what-we-do, .service {
-        min-height: 363px;
-        margin-bottom: 15px;
-        padding: 36px 32px 60px;
-    }
-    .what-we-do {
-        &__company-name {
-            @include set-line-height(0.344rem);
-            letter-spacing: 1.9px;
-            font-size: 2.0rem;
+    &-assets, &-analytics {
+        @include breakpoint-tablet {
+            margin-left: 12px; 
         }
-        &__heading {
-            @include set-line-height(0.4rem);
-            font-size: 3.0rem;
-            max-width: 259px;
+        @include breakpoint-desktop {
+            margin-left: 15px; 
         }
-        &__description {
-            @include set-line-height(0.6rem);
-            font-size: 1.7rem;
+        @include breakpoint-large-desktop {
+            margin-left: 20px;
         }
     }
-    .service {
-        &__icon { font-size: 4.5rem; }
-        &__heading {
-            font-size: 1.6rem;
-            max-width: 164px;
-        }
-        &__description { font-size: 1.4rem; }
-    }
-    .service-assets, .service-analytics { margin-left: 15px; }
-}
-/*Media Queries for Large Desktop*/
-@include breakpoint-large-desktop {
-    .description-container { display: flex; }
-    .services-container {
-        padding-top: 70px;
-        min-height: 1161px;
-    }
-    .what-we-do, .service {
-        min-height: 350px;
-        margin-bottom: 20px;
-        padding: 54px 41px 41px;
-    }
-    .what-we-do {
-        &__company-name {
-            @include set-line-height(0.413rem);
-            letter-spacing: 1.98px;
-            font-size: 2.4rem;
-        }
-        &__heading {
-            @include set-line-height(0.2rem);
-            font-size: 3.8rem;
-            max-width: 315px;
-        }
-        &__img {
-            display: block;
-            padding: 5px 12px 0 0;
-        }
-    }
-    .service {
-        &__icon { font-size: 4.5rem; }
-        &__heading {
-            font-size: 2.0rem;
-            max-width: 200px;
-        }
-    }
-    .service-assets, .service-analytics { margin-left: 20px; }
 }

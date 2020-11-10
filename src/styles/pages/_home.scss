@@ -7,12 +7,22 @@
 }
 /*Media Queries for Small Desktop*/
 @include breakpoint-desktop {
-    .center-container { @include center-container($container-width-desktop); } 
+    .center-container { 
+        @include center-container($container-width-desktop); 
+    } 
 }
 /*Media Queries for Large Desktop*/
 @include breakpoint-large-desktop {
-    .center-container { @include center-container($container-width-large-desktop); }
+    .center-container { 
+        @include center-container($container-width-large-desktop); 
+    }
 }
-.overflow-hidden { overflow: hidden; }
-a { transition: color 1s; }
-.d-block { display: block; }
+.overflow-hidden { 
+    overflow: hidden; 
+}
+a { 
+    transition: color 1s; 
+}
+.d-block { 
+    display: block; 
+}

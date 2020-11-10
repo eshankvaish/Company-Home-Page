@@ -1,9 +1,10 @@
 header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     z-index: 9999;
     top: 0;
     background-color: $secondary-text-color;
-    box-shadow: 0px -3px 19px $header-bg-color;
+    box-shadow: 0 -3px 19px $header-bg-color;
     transition: opacity 0.5s linear; //Transition when the header shows back on scroll up
 }
 //For hiding the header on scroll down
@@ -11,20 +12,61 @@ header {
     position: absolute;
     opacity: 0;
 }
-.top-navbar { @include flexbox(row, space-between); }
+.top-navbar { 
+    @include flexbox(row, space-between); 
+
+    @include breakpoint-tablet {
+        padding: 0; 
+    }
+}
 .logo-container {
     @include flexbox(row, space-between, center);
     flex: 100%;
     padding: 0 $primary-padding;
     min-height: 61px;
+
+    @include breakpoint-tablet {
+        min-height: $topbar-tablet-desktop-min-height;
+        padding: 0;
+    }
+    @include breakpoint-desktop {
+        flex: auto;
+        min-height: $topbar-tablet-desktop-min-height;
+    }
 }
 .logo {
     height: 35px;
     width: 96px;
 
+    @include breakpoint-tablet {
+        width: 108px;
+        height: 40px;
+    }
+    @include breakpoint-desktop {
+        
+    }
+
     &__img {
         height: 100%;
         width: 100%;
+    }
+
+    &-toggle {
+        @include breakpoint-desktop {
+            display: none; 
+        }
+
+        &__img {
+            display: none;
+            font-size: 2.5rem;
+
+            @include breakpoint-tablet {
+                font-size: 3.5rem;
+            }
+            @include breakpoint-desktop {
+                
+            }
+        }
     }
 }
 .top-nav-list {
@@ -35,73 +77,56 @@ header {
     top: 61px;
     overflow: auto;
 
-    &__item {
-        width: 100%;
-        border-bottom: 0.7px solid $border-color;
-        padding: 20px $primary-padding 17px;
-
-        &--content {
-            @include set-line-height(0.275rem);
-            font-size: 1.6rem;
-            display: block;
-
-            &:hover { color: $color-primary; }
-        }
-    }
-}
-.logo-toggle__img {
-    display: none;
-    font-size: 2.5rem;
-}
-.toggle-active { display: block; }
-/*Media Queries for Tablets*/
-@include breakpoint-tablet {
-    .top-navbar { padding: 0; }
-    .logo {
-        width: 108px;
-        height: 40px;
-    }
-    .logo-toggle__img { font-size: 3.5rem; }
-    .logo-container {
-        min-height: $topbar-tablet-desktop-min-height;
-        padding: 0;
-    }
-    .top-nav-list {
+    @include breakpoint-tablet {
         height: calc(100vh - #{$topbar-tablet-desktop-min-height});
         top: 80px;
-
-        &__item { padding: 20px 0 17px $primary-padding-tablet; }
     }
-}
-/*Media Queries for Tablets End*/
-/*Media Queries for Small Desktop*/
-@include breakpoint-desktop {
-    .logo-toggle { display: none; }
-    .logo-container {
-        flex: auto;
-        min-height: $topbar-tablet-desktop-min-height;
-    }
-    .top-nav-list {
+    @include breakpoint-desktop {
         @include flexbox(row, space-between, center);
         height: auto;
         background: none;
         width: auto;
         position: static;
         min-height: $topbar-tablet-desktop-min-height;
-        
-        &__item {
+    }
+
+    &__item {
+        width: 100%;
+        border-bottom: 0.7px solid $border-color;
+
+        @include breakpoint-tablet {
+            padding: 20px 0 17px $primary-padding-tablet;
+        }
+        @include breakpoint-desktop {
             width: auto;
             border: none;
             font-size: 1.4rem;
             padding: 0 11px 0 20px;
+        }
 
-            &--content {
+        &--content {
+            @include set-line-height(0.275rem);
+            padding: 20px $primary-padding 17px;
+            font-size: 1.6rem;
+            display: block;
+
+            &:hover { 
+                color: $color-primary; 
+            }
+            @include breakpoint-tablet {
+                padding: 0;
+            }
+            @include breakpoint-desktop {
                 @include set-line-height(0.2rem);
                 font-size: 1.4rem;
                 color: $nav-items-text-color;
             }
-            &--last { display: none; }
+        }
+        &--last {
+            @include breakpoint-desktop {
+                display: none;
+            } 
         }
     }
 }
-/*Media Queries for Small Desktop End*/
+.toggle-active { display: block; }

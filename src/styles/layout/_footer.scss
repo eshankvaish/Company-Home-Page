@@ -2,20 +2,90 @@ footer {
     background: linear-gradient(131.71deg, $primary-gradient-bg-color 3.59%, $color-primary 85.03%);
     min-height: 295px;
     position: relative;
+
+    @include breakpoint-tablet {
+        min-height: auto;
+    }
 }
 .bottom-bar {
     @include flexbox(column, space-evenly);
     min-height: 257px;
     padding: 0 20px;
     color: $primary-text-color;
+
+    @include breakpoint-tablet {
+        //Change Flex Direction
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 186px;
+    }
+    @include breakpoint-large-desktop {
+        min-height: 206px;
+    }
+}
+.bottom-navbar {
+    @include flexbox(row, space-between);
+    min-width: 200px;
+
+    @include breakpoint-tablet {
+        min-width: 205px;
+    }
+    @include breakpoint-desktop {
+        min-width: 244px; 
+    }
+    @include breakpoint-large-display {
+        min-width: 291px;
+    }
+}
+.bottom-navlist {
+    @include flexbox(column, space-between);
+    min-height: 126px;
+
+    @include breakpoint-tablet {
+        min-height: 130px; 
+    }
+    @include breakpoint-desktop {
+        min-height: 128px;
+    }
+
+    &__item {
+        @include set-line-height(0.5rem);
+        font-size: 1.3rem;
+        letter-spacing: 0.2px;
+
+        &:hover { 
+            color: $secondary-text-color; //hover effect
+        }
+        @include breakpoint-desktop {
+            font-size: 1.4rem;
+            letter-spacing: 0.22px;
+        }
+    }
 }
 .social-container {
     @include flexbox(column, space-between);
     min-height: 66px;
 
+    @include breakpoint-tablet {
+        min-height: 83px;
+    }
+    @include breakpoint-desktop {
+        min-height: 83px;
+    }
+
     &__logo {
         min-width: 77px;
         min-height: 28px;
+
+        @include breakpoint-tablet {
+            min-width: 110px;
+            min-height: 37px;
+        }
+        @include breakpoint-large-desktop {
+            min-width: 123px;
+            min-height: 41px;
+        }
 
         &--img {
             width: 100%;
@@ -27,27 +97,39 @@ footer {
     @include flexbox(row, space-between);
     min-width: 161px;
 
+    @include breakpoint-tablet {
+        min-width: 150px;
+    }
+    @include breakpoint-desktop {
+        min-width: 192px;
+    }
+
     &__icon {
         font-size: 2.8rem;
         border-radius: 50%;
+        color: $secondary-text-color;
         
-        &:hover { background-color: $border-color; }
+        &:hover { 
+            background-color: $border-color; 
+        }
+        @include breakpoint-tablet {
+            font-size: 2.7rem;
+        }
+        @include breakpoint-desktop {
+            font-size: 3rem; 
+        }
+    }
+    &--content {
+        display: block;
     }
 }
-.bottom-navbar {
-    @include flexbox(row, space-between);
-    min-width: 200px;
-}
-.bottom-navlist {
-    @include flexbox(column, space-between);
-    min-height: 126px;
-
-    &__item {
-        @include set-line-height(0.5rem);
-        font-size: 1.3rem;
-        letter-spacing: 0.2px;
-
-        &:hover { color: $secondary-text-color; }  //hover effect
+.social-copyright {
+    @include breakpoint-tablet {
+        @include flexbox(column, space-between);
+        min-height: 130px;
+    }
+    @include breakpoint-desktop {
+        min-height: 128px;
     }
 }
 .copyright {
@@ -57,37 +139,8 @@ footer {
     font-size: 0.95rem;
     letter-spacing: 0.24px;
     font-weight: 300;
-}
-/*Media Queries for Tablet*/
-@include breakpoint-tablet {
-    footer { min-height: auto; }
-    .bottom-bar {
-        //Change Flex Direction
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 186px;
-    }
-    .social-container {
-        min-height: 83px;
-    
-        &__logo {
-            min-width: 110px;
-            min-height: 37px;
-        }
-    }
-    .social-icons {
-        min-width: 150px;
-    
-        &__icon { font-size: 2.7rem; }
-    }
-    .social-copyright {
-        @include flexbox(column, space-between);
-        min-height: 130px;
-    }
-    .bottom-navbar { min-width: 205px; }
-    .bottom-navlist { min-height: 130px; }
-    .copyright {
+
+    @include breakpoint-tablet {
         @include set-line-height(0.189rem);
         position: static;
         font-size: 1.1rem;
@@ -95,43 +148,9 @@ footer {
         font-weight: 300; 
         display: block;
     }
-}
-/*Media Queries for Desktop*/
-@include breakpoint-desktop {
-    .social-container {
-        min-height: 83px;
-    
-        &__logo {
-            min-width: 123px;
-            min-height: 41px;
-        }
-    }
-    .social-icons {
-        min-width: 192px;
-    
-        &__icon { font-size: 3rem; }
-    }
-    .social-copyright { min-height: 128px; }
-    .bottom-navbar { min-width: 244px; }
-    .bottom-navlist {
-        min-height: 128px;
-        
-        &__item {
-            font-size: 1.4rem;
-            letter-spacing: 0.22px;
-        }
-    }
-    .copyright {
+    @include breakpoint-desktop {
         @include set-line-height(0.206rem);
         font-size: 1.2rem;
         letter-spacing: 1.11px;
     }
-}
-/*Media Queries for Lrge Desktop*/
-@include breakpoint-large-desktop {
-    .bottom-bar { min-height: 206px; }
-}
-/*Media Queries for Large Displays*/
-@include breakpoint-large-display {
-    .bottom-navbar { min-width: 291px; }
 }
